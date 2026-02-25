@@ -1,0 +1,399 @@
+---
+/**
+ * electrician.astro — Electrician Website Service Page
+ *
+ * Route: /services/electrician
+ *
+ * SECTIONS:
+ *   1. Hero        — Page title, subtitle, and breadcrumb
+ *   2. Overview    — Description + placeholder image
+ *   3. Features    — Grid of what's included
+ *   4. CTA         — Call to action to get in touch
+ */
+
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Electrician Website Design | DevPortfolio"
+    description="Professional website design for electricians and electrical contractors. Generate service calls, build trust, and grow your electrical business online."
+>
+    <!-- ============================================================
+       SECTION 1: HERO
+       Bold yellow/dark styling to match the electrical trade feel
+       ============================================================ -->
+    <section
+        class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-yellow-900 text-white overflow-hidden"
+    >
+        <!-- Decorative background blobs -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div
+                class="absolute top-10 right-20 w-80 h-80 bg-yellow-400 rounded-full blur-3xl"
+            >
+            </div>
+            <div
+                class="absolute bottom-0 left-10 w-64 h-64 bg-amber-400 rounded-full blur-3xl"
+            >
+            </div>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+            <!-- Breadcrumb navigation -->
+            <nav class="flex items-center gap-2 text-sm text-slate-400 mb-8">
+                <a href="/" class="hover:text-white transition-colors">Home</a>
+                <span>/</span>
+                <a href="/#projects" class="hover:text-white transition-colors"
+                    >Services</a
+                >
+                <span>/</span>
+                <span class="text-yellow-400">Electrician Website</span>
+            </nav>
+
+            <!-- Hero content -->
+            <div class="max-w-3xl">
+                <!-- Industry badge -->
+                <span
+                    class="inline-flex items-center gap-2 bg-yellow-400/10 text-yellow-400 border border-yellow-400/20 text-sm font-medium px-3 py-1 rounded-full mb-6"
+                >
+                    ⚡ Electrical Trade Industry
+                </span>
+
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
+                >
+                    Electrician Websites That
+                    <span class="text-yellow-400"> Power New Leads</span>
+                </h1>
+
+                <p
+                    class="mt-6 text-lg text-slate-300 leading-relaxed max-w-2xl"
+                >
+                    I build professional websites for electricians and
+                    electrical contractors that rank locally, build instant
+                    trust, and make it effortless for homeowners to call or
+                    request a quote.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a
+                        href="/#contact"
+                        class="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition-colors shadow-lg shadow-yellow-500/25"
+                    >
+                        Get a Free Quote
+                    </a>
+                    <a
+                        href="#overview"
+                        class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
+                    >
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 2: OVERVIEW
+       Description of the service + placeholder image side by side
+       ============================================================ -->
+    <section id="overview" class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: description text -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-0.5 bg-yellow-500"></span>
+                        <span
+                            class="text-yellow-600 font-medium text-sm uppercase tracking-wider"
+                            >What I Build</span
+                        >
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+                        A Website That Works as Hard as You Do
+                    </h2>
+
+                    <div class="mt-6 space-y-4 text-slate-600 leading-relaxed">
+                        <p>
+                            Most electrician websites are either non-existent or
+                            stuck in the past — slow, hard to navigate on
+                            mobile, and missing the basics that turn a visitor
+                            into a paying customer. That changes with your new
+                            site.
+                        </p>
+                        <p>
+                            I design clean, fast-loading electrician websites
+                            built around one goal: getting you more service
+                            calls. Every page is optimized for local SEO so
+                            homeowners in your service area can find you when
+                            they need you most.
+                        </p>
+                        <p>
+                            Whether you handle residential wiring, commercial
+                            projects, or emergency callouts, your website will
+                            clearly communicate what you do, where you work, and
+                            how to reach you — 24 hours a day.
+                        </p>
+                    </div>
+
+                    <!-- Quick stats -->
+                    <div
+                        class="mt-8 grid grid-cols-3 gap-6 pt-8 border-t border-slate-100"
+                    >
+                        <div>
+                            <p class="text-2xl font-bold text-yellow-600">
+                                Local
+                            </p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                SEO Focused
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-yellow-600">
+                                Fast
+                            </p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                Page Load Speed
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-yellow-600">
+                                100%
+                            </p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                Mobile Ready
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: image -->
+                <div class="relative">
+                    <img
+                        src="https://picsum.photos/seed/electrician-panel-work/600/480"
+                        alt="An electrician working on an electrical panel"
+                        class="rounded-2xl shadow-xl w-full object-cover border border-slate-100"
+                        width="600"
+                        height="480"
+                    />
+                    <!-- Floating label on image -->
+                    <div
+                        class="absolute -top-4 -right-4 bg-yellow-500 text-slate-900 text-sm font-bold px-4 py-2 rounded-xl shadow-lg"
+                    >
+                        ⚡ Electrician Niche
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 3: FEATURES
+       Grid of what's included in an electrician website package
+       ============================================================ -->
+    <section class="py-20 md:py-28 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- Section header -->
+            <div class="text-center mb-14">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <span class="w-8 h-0.5 bg-yellow-500"></span>
+                    <span
+                        class="text-yellow-600 font-medium text-sm uppercase tracking-wider"
+                        >What's Included</span
+                    >
+                    <span class="w-8 h-0.5 bg-yellow-500"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+                    Every Electrician Website Includes
+                </h2>
+                <p class="mt-4 text-slate-600 max-w-xl mx-auto">
+                    A complete, professional web presence built specifically for
+                    electrical contractors — designed to generate calls and
+                    build credibility.
+                </p>
+            </div>
+
+            <!-- Features grid — 6 cards in 3 columns -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        📞
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Click-to-Call Integration
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Your phone number is displayed prominently with a
+                        tap-to-call link on every page. On mobile, one tap
+                        connects a customer directly to your phone — no
+                        friction, no copy-pasting.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        🗺️
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Local SEO Optimization
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Structured data markup, location-based meta tags, and
+                        service-area pages that help your business appear in
+                        Google results when someone nearby searches for an
+                        electrician.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        🔧
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Services Breakdown
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        A clear, scannable list of every service you offer —
+                        panel upgrades, rewiring, EV chargers, emergency
+                        callouts, and more. Clients know exactly what you handle
+                        before they even call.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        🏅
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        License & Insurance Display
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Show your contractor license number, insurance status,
+                        and any certifications upfront. This immediately
+                        separates you from unlicensed competitors and builds
+                        serious trust with homeowners.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        ⭐
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Reviews & Testimonials
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Pull in your best Google reviews and display them
+                        prominently. Real testimonials from real customers are
+                        the single most powerful trust signal you can put on
+                        your site.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        📋
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Quote Request Form
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        A simple form that lets visitors describe their
+                        electrical job and submit a quote request directly to
+                        your inbox — capturing leads even when you're on a job
+                        site and can't answer the phone.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Full-width preview image -->
+            <div class="mt-16">
+                <img
+                    src="https://picsum.photos/seed/electrical-wiring-wide/1200/400"
+                    alt="Full width preview of an electrician website layout"
+                    class="rounded-2xl shadow-lg w-full object-cover border border-yellow-100"
+                    width="1200"
+                    height="400"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 4: CTA
+       Final push to get the visitor to reach out
+       ============================================================ -->
+    <section
+        class="py-20 md:py-24 bg-gradient-to-br from-yellow-500 to-amber-600"
+    >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <span
+                class="inline-block text-4xl mb-4 drop-shadow-sm"
+                aria-hidden="true">⚡</span
+            >
+            <h2
+                class="text-3xl sm:text-4xl font-bold text-slate-900 leading-tight"
+            >
+                Ready to Grow Your Electrical Business Online?
+            </h2>
+            <p
+                class="mt-4 text-amber-900 text-lg max-w-xl mx-auto leading-relaxed"
+            >
+                Let's build a website that gets you found on Google and turns
+                visitors into booked jobs. Reach out today for a free,
+                no-obligation quote.
+            </p>
+
+            <!-- CTA buttons -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a
+                    href="/#contact"
+                    class="bg-slate-900 text-yellow-400 hover:bg-slate-800 font-bold px-8 py-3 rounded-lg transition-colors shadow-lg"
+                >
+                    Start My Project
+                </a>
+                <a
+                    href="/#projects"
+                    class="bg-amber-700/30 hover:bg-amber-700/50 text-slate-900 font-semibold px-8 py-3 rounded-lg border border-slate-900/20 transition-colors"
+                >
+                    See More Examples
+                </a>
+            </div>
+
+            <!-- Reassurance line -->
+            <p class="mt-6 text-amber-800 text-sm">
+                Free consultation · No pressure · Response within 24 hours
+            </p>
+        </div>
+    </section>
+</Layout>

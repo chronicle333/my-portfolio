@@ -1,0 +1,469 @@
+---
+/**
+ * photography.astro — Photography & Creative Studio Website Service Page
+ *
+ * Route: /services/photography
+ *
+ * A versatile "creative studio" template that works for:
+ * photographers, videographers, artists, designers, content creators,
+ * and any visual brand that needs a stunning online portfolio.
+ *
+ * SECTIONS:
+ *   1. Hero        — Page title, subtitle, and breadcrumb
+ *   2. Overview    — Description + real photo
+ *   3. Features    — Grid of what's included
+ *   4. CTA         — Call to action to get in touch
+ */
+
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Photography & Creative Studio Website Design | DevPortfolio"
+    description="Stunning portfolio and booking websites for photographers, videographers, and creative studios. Show your work beautifully and book more clients online."
+>
+    <!-- ============================================================
+       SECTION 1: HERO
+       Dark cinematic feel with rose/pink accent — fits the creative world
+       ============================================================ -->
+    <section
+        class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-rose-900 text-white overflow-hidden"
+    >
+        <!-- Decorative background blobs -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div
+                class="absolute top-10 right-20 w-80 h-80 bg-rose-400 rounded-full blur-3xl"
+            >
+            </div>
+            <div
+                class="absolute bottom-0 left-10 w-64 h-64 bg-pink-500 rounded-full blur-3xl"
+            >
+            </div>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+            <!-- Breadcrumb navigation -->
+            <nav class="flex items-center gap-2 text-sm text-slate-400 mb-8">
+                <a href="/" class="hover:text-white transition-colors">Home</a>
+                <span>/</span>
+                <a href="/#projects" class="hover:text-white transition-colors"
+                    >Services</a
+                >
+                <span>/</span>
+                <span class="text-rose-400">Photography & Creative</span>
+            </nav>
+
+            <!-- Hero content -->
+            <div class="max-w-3xl">
+                <!-- Industry badge -->
+                <span
+                    class="inline-flex items-center gap-2 bg-rose-400/10 text-rose-400 border border-rose-400/20 text-sm font-medium px-3 py-1 rounded-full mb-6"
+                >
+                    📷 Photography & Creative Industry
+                </span>
+
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
+                >
+                    Creative Websites That Let
+                    <span class="text-rose-400"> Your Work Speak</span>
+                </h1>
+
+                <p
+                    class="mt-6 text-lg text-slate-300 leading-relaxed max-w-2xl"
+                >
+                    I build striking portfolio and booking websites for
+                    photographers, videographers, and creative studios. Your
+                    imagery deserves a stage worthy of it — fast, full-screen,
+                    and impossible to scroll past.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a
+                        href="/#contact"
+                        class="bg-rose-600 hover:bg-rose-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-lg shadow-rose-600/25"
+                    >
+                        Get a Free Quote
+                    </a>
+                    <a
+                        href="#overview"
+                        class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
+                    >
+                        See What's Included
+                    </a>
+                </div>
+
+                <!-- Versatility note -->
+                <p class="mt-8 text-slate-400 text-sm">
+                    Also works for:
+                    <span class="text-slate-300">
+                        Videographers · Artists · Designers · Content Creators ·
+                        Studios
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 2: OVERVIEW
+       Description of the service + real photo side by side
+       ============================================================ -->
+    <section id="overview" class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: description text -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-0.5 bg-rose-500"></span>
+                        <span
+                            class="text-rose-600 font-medium text-sm uppercase tracking-wider"
+                            >What I Build</span
+                        >
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+                        A Portfolio as Powerful as Your Lens
+                    </h2>
+
+                    <div class="mt-6 space-y-4 text-slate-600 leading-relaxed">
+                        <p>
+                            Most creative professionals rely on Instagram or
+                            generic template builders to show their work. The
+                            result? A portfolio that looks just like everyone
+                            else's — and a booking process that loses clients
+                            halfway through.
+                        </p>
+                        <p>
+                            I design custom portfolio websites that are built
+                            around your visual style. Full-screen image
+                            galleries, smooth transitions, and a layout that
+                            puts your work front and center — with a clear,
+                            frictionless path for clients to book a session or
+                            request a quote.
+                        </p>
+                        <p>
+                            Whether you shoot weddings, portraits, commercial
+                            products, or urban landscapes — your website will
+                            reflect your aesthetic and convert browsers into
+                            booked clients.
+                        </p>
+                    </div>
+
+                    <!-- Quick stats -->
+                    <div
+                        class="mt-8 grid grid-cols-3 gap-6 pt-8 border-t border-slate-100"
+                    >
+                        <div>
+                            <p class="text-2xl font-bold text-rose-600">
+                                Visual
+                            </p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                Full-Screen Galleries
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-rose-600">Fast</p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                Image Load Speed
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-rose-600">Easy</p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                Client Booking
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: real photo -->
+                <div class="relative">
+                    <img
+                        src="https://picsum.photos/seed/camera-studio-setup/600/480"
+                        alt="Photography studio setup showing camera equipment and lighting"
+                        class="rounded-2xl shadow-xl w-full object-cover border border-slate-100"
+                        width="600"
+                        height="480"
+                    />
+                    <!-- Floating label on image -->
+                    <div
+                        class="absolute -top-4 -right-4 bg-rose-600 text-white text-sm font-bold px-4 py-2 rounded-xl shadow-lg"
+                    >
+                        📷 Creative Niche
+                    </div>
+                    <!-- Floating client stat -->
+                    <div
+                        class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl px-4 py-3 border border-slate-100"
+                    >
+                        <p class="text-xs text-slate-500 font-medium">
+                            Also works for
+                        </p>
+                        <p class="text-sm font-bold text-slate-800 mt-0.5">
+                            Any visual creative
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 3: FEATURES
+       Grid of what's included in a photography/creative website package
+       ============================================================ -->
+    <section class="py-20 md:py-28 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- Section header -->
+            <div class="text-center mb-14">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <span class="w-8 h-0.5 bg-rose-500"></span>
+                    <span
+                        class="text-rose-600 font-medium text-sm uppercase tracking-wider"
+                        >What's Included</span
+                    >
+                    <span class="w-8 h-0.5 bg-rose-500"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+                    Every Creative Website Includes
+                </h2>
+                <p class="mt-4 text-slate-600 max-w-xl mx-auto">
+                    A complete web presence designed for visual storytellers —
+                    built to impress on first scroll and convert on the way
+                    through.
+                </p>
+            </div>
+
+            <!-- Features grid — 6 cards in 3 columns -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        🖼️
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Full-Screen Portfolio Gallery
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        A stunning, edge-to-edge image gallery that showcases
+                        your best work at full resolution. Grid or masonry
+                        layout, filterable by category — your portfolio, your
+                        rules.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        📅
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Session Booking Form
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        A streamlined booking inquiry form that captures the
+                        client's name, session type, preferred date, and budget
+                        — so you get qualified leads straight to your inbox
+                        instead of chasing DMs.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        💼
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Services & Packages Page
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        A dedicated page presenting your offerings, packages,
+                        and pricing tiers in a clean, scannable format. Clients
+                        know exactly what they're getting — and what it costs —
+                        before they ever reach out.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        ⭐
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Client Testimonials
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Show off glowing reviews from past clients with a
+                        beautifully designed testimonials section. Real words
+                        from real people carry more weight than any portfolio
+                        image alone.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        📸
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Instagram Feed Integration
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Optionally embed your latest Instagram posts directly on
+                        your website so it always feels fresh and updated —
+                        without you having to touch the site every time you post
+                        new work.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-rose-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        🔍
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        SEO for Creatives
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Optimized meta tags, image alt text, structured data,
+                        and location-based targeting so potential clients
+                        searching for a photographer in your city can actually
+                        find you on Google.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Full-width real photo preview -->
+            <div class="mt-16 relative overflow-hidden rounded-2xl shadow-lg">
+                <img
+                    src="https://picsum.photos/seed/creative-studio-wide/1200/400"
+                    alt="Wide preview of a creative photography studio website layout"
+                    class="w-full object-cover border border-rose-100"
+                    width="1200"
+                    height="400"
+                />
+                <!-- Overlay label -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-slate-900/60 to-transparent flex items-center"
+                >
+                    <div class="px-8">
+                        <p
+                            class="text-rose-300 text-sm font-medium uppercase tracking-wider mb-1"
+                        >
+                            Example Layout
+                        </p>
+                        <p class="text-white text-2xl font-bold">
+                            Your work, front and center.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 4: WHO IS THIS FOR?
+       Extra section showing versatility — this template works for many niches
+       ============================================================ -->
+    <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+                    Works for Any Visual Creative
+                </h2>
+                <p class="mt-4 text-slate-600 max-w-lg mx-auto">
+                    This template isn't just for photographers. If your work is
+                    visual, this is built for you.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                {
+                    [
+                        { emoji: "📷", label: "Photographer" },
+                        { emoji: "🎬", label: "Videographer" },
+                        { emoji: "🎨", label: "Illustrator" },
+                        { emoji: "✏️", label: "Graphic Designer" },
+                        { emoji: "🎵", label: "Music Artist" },
+                        { emoji: "🏠", label: "Interior Designer" },
+                    ].map((item) => (
+                        <div class="flex flex-col items-center gap-3 p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-rose-200 hover:bg-rose-50 transition-all duration-200 group cursor-default">
+                            <span class="text-3xl">{item.emoji}</span>
+                            <span class="text-sm font-semibold text-slate-700 group-hover:text-rose-700 text-center transition-colors">
+                                {item.label}
+                            </span>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 5: CTA
+       Final push to get the visitor to reach out
+       ============================================================ -->
+    <section class="py-20 md:py-24 bg-gradient-to-br from-rose-600 to-pink-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <span
+                class="inline-block text-4xl mb-4 drop-shadow-sm"
+                aria-hidden="true">📷</span
+            >
+            <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                Ready to Show the World Your Best Work?
+            </h2>
+            <p
+                class="mt-4 text-rose-100 text-lg max-w-xl mx-auto leading-relaxed"
+            >
+                Let's build a portfolio that does justice to your craft and
+                turns visitors into booked sessions. Get in touch today for a
+                free, no-obligation quote.
+            </p>
+
+            <!-- CTA buttons -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a
+                    href="/#contact"
+                    class="bg-white text-rose-700 hover:bg-rose-50 font-bold px-8 py-3 rounded-lg transition-colors shadow-lg"
+                >
+                    Start My Project
+                </a>
+                <a
+                    href="/#projects"
+                    class="bg-rose-500/40 hover:bg-rose-500/60 text-white font-semibold px-8 py-3 rounded-lg border border-white/30 transition-colors"
+                >
+                    See More Examples
+                </a>
+            </div>
+
+            <!-- Reassurance line -->
+            <p class="mt-6 text-rose-200 text-sm">
+                Free consultation · No pressure · Response within 24 hours
+            </p>
+        </div>
+    </section>
+</Layout>

@@ -1,0 +1,94 @@
+---
+/**
+ * Layout.astro
+ *
+ * This is your MASTER TEMPLATE — the equivalent of copying your <head>,
+ * <header>, and <footer> into every HTML file, except you only write it once.
+ *
+ * HOW IT WORKS:
+ *   1. Every page imports this Layout and wraps its content inside it.
+ *   2. The <slot /> tag below is where each page's unique content appears.
+ *   3. Navbar and Footer are imported here once and show up on every page.
+ *
+ * PROPS (page-level customization):
+ *   - title       → sets the browser tab title and og:title
+ *   - description → sets the meta description for SEO
+ *
+ * USAGE IN A PAGE:
+ *   ---
+ *   import Layout from '../layouts/Layout.astro';
+ *   ---
+ *   <Layout title="About Me" description="Learn more about my background.">
+ *     <h1>Hello!</h1>
+ *   </Layout>
+ */
+
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+// Destructure props with sensible defaults
+// Any page can override these by passing its own title/description
+const {
+    title = "DevPortfolio — Frontend Developer",
+    description = "A frontend developer specializing in clean, fast websites built with Astro and Tailwind CSS.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- ── Character encoding & viewport ── -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- ── Primary SEO meta tags ── -->
+        <meta name="description" content={description} />
+        <meta name="author" content="DevPortfolio" />
+
+        <!-- ── Open Graph — controls how your page looks when shared on
+         Facebook, LinkedIn, Discord, etc. ── -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+
+        <!-- ── Twitter / X card ── -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+
+        <!-- ── Favicon ── -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+
+        <!-- ── Astro generator tag (helpful for support/debugging) ── -->
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- ── Page title — shows in the browser tab ── -->
+        <title>{title}</title>
+    </head>
+
+    <body
+        class="flex flex-col min-h-screen bg-white text-slate-900 antialiased"
+    >
+        <!-- Navbar renders at the top of EVERY page automatically -->
+        <Navbar />
+
+        <!--
+      <slot /> is the magic piece.
+      Whatever you put between <Layout>...</Layout> in a page file
+      gets injected right here — just like a template placeholder.
+
+      Think of it like this in traditional HTML:
+        <!-- header.html included here (above) ~~
+        <!-- YOUR PAGE CONTENT goes here ~~
+        <!-- footer.html included here (below) ~~
+    -->
+        <main class="flex-1">
+            <slot />
+        </main>
+
+        <!-- Footer renders at the bottom of EVERY page automatically -->
+        <Footer />
+    </body>
+</html>

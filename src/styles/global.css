@@ -1,0 +1,33 @@
+/* ==========================================================
+   global.css
+   - Imports Tailwind CSS v4 (the single line below is all
+     you need — no tailwind.config.js required in v4)
+   - Add any custom base styles or CSS variables below
+   ========================================================== */
+
+@import "tailwindcss";
+
+/* ----------------------------------------------------------
+   Custom base styles
+   These apply globally to every page, just like your old
+   style.css would have done.
+   ---------------------------------------------------------- */
+
+/* Smooth scrolling — enables anchor links like /#about to
+   scroll smoothly instead of jumping */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base body defaults */
+body {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    color: #0f172a; /* slate-900 */
+    background-color: #ffffff;
+}
+
+/* Focus ring for accessibility */
+*:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}

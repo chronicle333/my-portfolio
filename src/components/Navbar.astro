@@ -1,0 +1,362 @@
+---
+/**
+ * Navbar.astro
+ *
+ * This is your site-wide navigation bar.
+ * It lives in src/components/ and is imported once inside Layout.astro.
+ * You never have to copy-paste it across pages — Layout handles that.
+ *
+ * TO EDIT NAV LINKS: Find the <ul> sections below and update the <a> tags.
+ * TO ADD A SERVICE:  Add a new <li> in both the desktop AND mobile menus.
+ */
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+            <!-- ===================== LOGO / BRAND ===================== -->
+            <!-- Change "DevPortfolio" to your own name or brand -->
+            <a
+                href="/"
+                class="text-xl font-bold text-blue-600 tracking-tight hover:text-blue-700 transition-colors"
+            >
+                Dev<span class="text-slate-900">Portfolio</span>
+            </a>
+
+            <!-- ===================== DESKTOP NAV ===================== -->
+            <!-- Hidden on mobile (hidden), shown as flex row on medium screens (md:flex) -->
+            <ul
+                class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700"
+            >
+                <li>
+                    <a href="/" class="hover:text-blue-600 transition-colors"
+                        >Home</a
+                    >
+                </li>
+
+                <li>
+                    <a
+                        href="/#about"
+                        class="hover:text-blue-600 transition-colors">About</a
+                    >
+                </li>
+
+                <li>
+                    <a
+                        href="/#projects"
+                        class="hover:text-blue-600 transition-colors"
+                        >Projects</a
+                    >
+                </li>
+
+                <!-- SERVICES DROPDOWN — desktop only -->
+                <!-- The "group" class on the <li> lets child elements react to hover -->
+                <li class="relative group">
+                    <button
+                        class="flex items-center gap-1 hover:text-blue-600 transition-colors cursor-pointer"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        Services
+                        <!-- Chevron arrow — rotates on hover via CSS -->
+                        <svg
+                            class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown panel — hidden by default, shown on group hover -->
+                    <!-- "invisible opacity-0" hidden | "group-hover:visible group-hover:opacity-100" shown -->
+                    <ul
+                        class="absolute top-full left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-slate-100
+                   invisible opacity-0 group-hover:visible group-hover:opacity-100
+                   transition-all duration-200 ease-in-out z-50"
+                    >
+                        <li>
+                            <a
+                                href="/services/solar"
+                                class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-t-lg transition-colors"
+                            >
+                                ☀️ Solar Website
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/services/barbershop"
+                                class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                            >
+                                ✂️ Barbershop Website
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/services/electrician"
+                                class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                            >
+                                ⚡ Electrician Website
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/services/photography"
+                                class="block px-4 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-b-lg transition-colors"
+                            >
+                                📷 Photography Website
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a
+                        href="/#contact"
+                        class="hover:text-blue-600 transition-colors">Contact</a
+                    >
+                </li>
+
+                <!-- CTA Button in desktop nav -->
+                <li>
+                    <a
+                        href="/#contact"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold"
+                    >
+                        Hire Me
+                    </a>
+                </li>
+            </ul>
+
+            <!-- ===================== MOBILE HAMBURGER ===================== -->
+            <!-- Only visible on mobile screens (md:hidden) -->
+            <button
+                id="menu-toggle"
+                class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-slate-100 transition-colors"
+                aria-label="Toggle mobile menu"
+                aria-expanded="false"
+            >
+                <!-- Three bars that animate into an X when menu is open -->
+                <span
+                    id="bar1"
+                    class="block w-6 h-0.5 bg-slate-700 transition-all duration-300 origin-center"
+                ></span>
+                <span
+                    id="bar2"
+                    class="block w-6 h-0.5 bg-slate-700 transition-all duration-300"
+                ></span>
+                <span
+                    id="bar3"
+                    class="block w-6 h-0.5 bg-slate-700 transition-all duration-300 origin-center"
+                ></span>
+            </button>
+        </div><!-- /flex row -->
+
+        <!-- ===================== MOBILE MENU PANEL ===================== -->
+        <!-- Starts hidden. JS below toggles the "hidden" class on/off. -->
+        <div
+            id="mobile-menu"
+            class="hidden md:hidden border-t border-slate-100 py-4"
+        >
+            <ul class="flex flex-col gap-1 text-sm font-medium text-slate-700">
+                <li>
+                    <a
+                        href="/"
+                        class="block px-3 py-2.5 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="/#about"
+                        class="block px-3 py-2.5 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="/#projects"
+                        class="block px-3 py-2.5 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                        Projects
+                    </a>
+                </li>
+
+                <!-- MOBILE SERVICES ACCORDION -->
+                <!-- Clicking "Services" expands/collapses the sub-links -->
+                <li>
+                    <button
+                        id="services-toggle"
+                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                        aria-expanded="false"
+                    >
+                        <span>Services</span>
+                        <svg
+                            id="services-chevron"
+                            class="w-4 h-4 transition-transform duration-200"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Service sub-links — hidden until services-toggle is clicked -->
+                    <ul
+                        id="services-mobile-menu"
+                        class="hidden flex-col gap-1 mt-1 ml-4 pl-3 border-l-2 border-blue-100"
+                    >
+                        <li>
+                            <a
+                                href="/services/solar"
+                                class="block px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors text-slate-600"
+                            >
+                                ☀️ Solar Website
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/services/barbershop"
+                                class="block px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors text-slate-600"
+                            >
+                                ✂️ Barbershop Website
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/services/electrician"
+                                class="block px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors text-slate-600"
+                            >
+                                ⚡ Electrician Website
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/services/photography"
+                                class="block px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors text-slate-600"
+                            >
+                                📷 Photography Website
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a
+                        href="/#contact"
+                        class="block px-3 py-2.5 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+                <li class="mt-2 px-3">
+                    <a
+                        href="/#contact"
+                        class="block text-center bg-blue-600 text-white px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                    >
+                        Hire Me
+                    </a>
+                </li>
+            </ul>
+        </div><!-- /mobile-menu -->
+    </nav>
+</header>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<!--
+  Minimal vanilla JS — no frameworks, no libraries.
+  This is exactly like writing a <script> in your old static HTML pages.
+  It runs once when the page loads and adds click listeners.
+-->
+<script>
+    // --- Mobile hamburger toggle ---
+    // We use type assertions (as HTMLElement) so the editor knows these elements
+    // exist — the HTML above guarantees they do. No TypeScript required to write;
+    // the editor just needs the hint to stop showing "possibly null" warnings.
+    const menuToggle = document.getElementById("menu-toggle") as HTMLElement;
+    const mobileMenu = document.getElementById("mobile-menu") as HTMLElement;
+    const bar1 = document.getElementById("bar1") as HTMLElement;
+    const bar2 = document.getElementById("bar2") as HTMLElement;
+    const bar3 = document.getElementById("bar3") as HTMLElement;
+
+    if (menuToggle && mobileMenu && bar1 && bar2 && bar3) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = !mobileMenu.classList.contains("hidden");
+
+            if (isOpen) {
+                // Close menu
+                mobileMenu.classList.add("hidden");
+                menuToggle.setAttribute("aria-expanded", "false");
+                // Reset hamburger bars back to three lines
+                bar1.style.transform = "";
+                bar2.style.opacity = "1";
+                bar3.style.transform = "";
+            } else {
+                // Open menu
+                mobileMenu.classList.remove("hidden");
+                menuToggle.setAttribute("aria-expanded", "true");
+                // Animate bars into an X shape
+                bar1.style.transform = "translateY(8px) rotate(45deg)";
+                bar2.style.opacity = "0";
+                bar3.style.transform = "translateY(-8px) rotate(-45deg)";
+            }
+        });
+
+        // --- Close mobile menu when any nav link is clicked ---
+        // This is nice UX: tapping a link closes the menu automatically
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                menuToggle.setAttribute("aria-expanded", "false");
+                bar1.style.transform = "";
+                bar2.style.opacity = "1";
+                bar3.style.transform = "";
+            });
+        });
+    }
+
+    // --- Mobile services accordion toggle ---
+    const servicesToggle = document.getElementById(
+        "services-toggle",
+    ) as HTMLElement;
+    const servicesMobileMenu = document.getElementById(
+        "services-mobile-menu",
+    ) as HTMLElement;
+    const servicesChevron = document.getElementById(
+        "services-chevron",
+    ) as HTMLElement;
+
+    if (servicesToggle && servicesMobileMenu && servicesChevron) {
+        servicesToggle.addEventListener("click", () => {
+            const isOpen = !servicesMobileMenu.classList.contains("hidden");
+
+            if (isOpen) {
+                servicesMobileMenu.classList.add("hidden");
+                servicesMobileMenu.classList.remove("flex");
+                servicesChevron.style.transform = "";
+                servicesToggle.setAttribute("aria-expanded", "false");
+            } else {
+                servicesMobileMenu.classList.remove("hidden");
+                servicesMobileMenu.classList.add("flex");
+                servicesChevron.style.transform = "rotate(180deg)";
+                servicesToggle.setAttribute("aria-expanded", "true");
+            }
+        });
+    }
+</script>

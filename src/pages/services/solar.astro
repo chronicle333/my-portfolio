@@ -1,0 +1,391 @@
+---
+/**
+ * solar.astro — Solar Website Service Page
+ *
+ * Route: /services/solar
+ *
+ * This page showcases the solar website service you offer.
+ * It follows the same structure as the other service pages so
+ * you can easily copy/paste and edit for new services.
+ *
+ * SECTIONS:
+ *   1. Hero        — Page title, subtitle, and breadcrumb
+ *   2. Overview    — Description + placeholder image
+ *   3. Features    — Grid of what's included
+ *   4. CTA         — Call to action to get in touch
+ */
+
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Solar Website Design | DevPortfolio"
+    description="Professional website design for solar installation companies. Capture leads, showcase your work, and grow your solar business online."
+>
+    <!-- ============================================================
+       SECTION 1: HERO
+       Dark gradient background with page title and breadcrumb nav
+       ============================================================ -->
+    <section
+        class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900 text-white overflow-hidden"
+    >
+        <!-- Decorative background blobs -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div
+                class="absolute top-10 right-20 w-80 h-80 bg-amber-400 rounded-full blur-3xl"
+            >
+            </div>
+            <div
+                class="absolute bottom-0 left-10 w-64 h-64 bg-yellow-500 rounded-full blur-3xl"
+            >
+            </div>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
+            <!-- Breadcrumb navigation -->
+            <nav class="flex items-center gap-2 text-sm text-slate-400 mb-8">
+                <a href="/" class="hover:text-white transition-colors">Home</a>
+                <span>/</span>
+                <a href="/#projects" class="hover:text-white transition-colors"
+                    >Services</a
+                >
+                <span>/</span>
+                <span class="text-amber-400">Solar Website</span>
+            </nav>
+
+            <!-- Hero content -->
+            <div class="max-w-3xl">
+                <!-- Industry badge -->
+                <span
+                    class="inline-flex items-center gap-2 bg-amber-400/10 text-amber-400 border border-amber-400/20 text-sm font-medium px-3 py-1 rounded-full mb-6"
+                >
+                    ☀️ Solar Industry
+                </span>
+
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight"
+                >
+                    Solar Websites That
+                    <span class="text-amber-400"> Generate Leads</span>
+                </h1>
+
+                <p
+                    class="mt-6 text-lg text-slate-300 leading-relaxed max-w-2xl"
+                >
+                    I build high-converting websites for solar installation
+                    companies. From showcasing your panels to capturing quote
+                    requests, your site will work as hard as your team does.
+                </p>
+
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a
+                        href="/#contact"
+                        class="bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition-colors shadow-lg shadow-amber-500/25"
+                    >
+                        Get a Free Quote
+                    </a>
+                    <a
+                        href="#overview"
+                        class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg border border-white/20 transition-colors"
+                    >
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 2: OVERVIEW
+       Description of the service + placeholder image side by side
+       ============================================================ -->
+    <section id="overview" class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: description text -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-0.5 bg-amber-500"></span>
+                        <span
+                            class="text-amber-600 font-medium text-sm uppercase tracking-wider"
+                            >What I Build</span
+                        >
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+                        Everything a Solar Company Needs Online
+                    </h2>
+
+                    <div class="mt-6 space-y-4 text-slate-600 leading-relaxed">
+                        <p>
+                            Solar is a competitive industry. Your website needs
+                            to instantly build trust, explain your process
+                            clearly, and make it effortless for potential
+                            customers to request a quote.
+                        </p>
+                        <p>
+                            I design and build clean, fast-loading solar
+                            websites that are optimized for local SEO — so
+                            homeowners in your service area can actually find
+                            you on Google. No bloated page builders, no
+                            unnecessary plugins.
+                        </p>
+                        <p>
+                            Every solar site I build includes a prominent
+                            lead-capture form, trust-building elements like
+                            certifications and testimonials, and a clear
+                            breakdown of your installation process.
+                        </p>
+                    </div>
+
+                    <!-- Quick stats -->
+                    <div
+                        class="mt-8 grid grid-cols-3 gap-6 pt-8 border-t border-slate-100"
+                    >
+                        <div>
+                            <p class="text-2xl font-bold text-amber-600">
+                                Fast
+                            </p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                Page Load Speed
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-amber-600">SEO</p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                Local Optimized
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-amber-600">
+                                100%
+                            </p>
+                            <p class="text-sm text-slate-500 mt-0.5">
+                                Mobile Ready
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: image -->
+                <div class="relative">
+                    <img
+                        src="https://picsum.photos/seed/solar-panels-installation/600/480"
+                        alt="Preview of a solar company website design"
+                        class="rounded-2xl shadow-xl w-full object-cover border border-slate-100"
+                        width="600"
+                        height="480"
+                    />
+                    <!-- Floating label on image -->
+                    <div
+                        class="absolute -top-4 -right-4 bg-amber-500 text-slate-900 text-sm font-bold px-4 py-2 rounded-xl shadow-lg"
+                    >
+                        ☀️ Solar Niche
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 3: FEATURES
+       Grid of what's included in a solar website package
+       ============================================================ -->
+    <section class="py-20 md:py-28 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- Section header -->
+            <div class="text-center mb-14">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <span class="w-8 h-0.5 bg-amber-500"></span>
+                    <span
+                        class="text-amber-600 font-medium text-sm uppercase tracking-wider"
+                        >What's Included</span
+                    >
+                    <span class="w-8 h-0.5 bg-amber-500"></span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">
+                    Every Solar Website Includes
+                </h2>
+                <p class="mt-4 text-slate-600 max-w-xl mx-auto">
+                    A complete package designed specifically for solar
+                    installation businesses — nothing missing, nothing
+                    unnecessary.
+                </p>
+            </div>
+
+            <!-- Features grid — 6 cards in 3 columns -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        📋
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Lead Capture Form
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        A prominent quote request form on the homepage. Visitors
+                        can submit their name, address, and energy usage to get
+                        a quote — straight to your inbox.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        🗺️
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Local SEO Optimization
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Structured data, meta tags, and location-specific
+                        content so your business appears when homeowners in your
+                        area search for solar installers.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        🏠
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Project Gallery
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Showcase your completed installations with a clean photo
+                        gallery. Real photos of real work build more trust than
+                        any sales copy ever could.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        ⭐
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Testimonials Section
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Display reviews and testimonials from satisfied
+                        customers. Social proof is one of the strongest
+                        conversion tools for high-ticket services like solar.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        📱
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Fully Responsive Design
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Over 60% of local searches happen on mobile. Your solar
+                        site will look and work perfectly on every screen size —
+                        phones, tablets, and desktops.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div
+                    class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                    <div
+                        class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl mb-4"
+                    >
+                        🏅
+                    </div>
+                    <h3 class="font-bold text-slate-900 text-lg">
+                        Trust Badges &amp; Certifications
+                    </h3>
+                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                        Display your NABCEP certifications, manufacturer
+                        partnerships, BBB rating, and warranty information
+                        prominently to eliminate buyer hesitation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Second image — full width preview -->
+            <div class="mt-16">
+                <img
+                    src="https://picsum.photos/seed/solar-energy-wide/1200/400"
+                    alt="Full width preview of a solar website layout"
+                    class="rounded-2xl shadow-lg w-full object-cover border border-amber-100"
+                    width="1200"
+                    height="400"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+       SECTION 4: CTA
+       Final push to get the visitor to reach out
+       ============================================================ -->
+    <section
+        class="py-20 md:py-24 bg-gradient-to-br from-amber-500 to-orange-500"
+    >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <span
+                class="inline-block text-4xl mb-4 drop-shadow-sm"
+                aria-hidden="true">☀️</span
+            >
+            <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                Ready to Grow Your Solar Business Online?
+            </h2>
+            <p
+                class="mt-4 text-amber-100 text-lg max-w-xl mx-auto leading-relaxed"
+            >
+                Let's build a website that turns local searchers into booked
+                consultations. Get in touch today for a free, no-obligation
+                quote.
+            </p>
+
+            <!-- CTA buttons -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a
+                    href="/#contact"
+                    class="bg-white text-amber-700 hover:bg-amber-50 font-bold px-8 py-3 rounded-lg transition-colors shadow-lg"
+                >
+                    Start My Project
+                </a>
+                <a
+                    href="/#projects"
+                    class="bg-amber-600/40 hover:bg-amber-600/60 text-white font-semibold px-8 py-3 rounded-lg border border-white/30 transition-colors"
+                >
+                    See More Examples
+                </a>
+            </div>
+
+            <!-- Reassurance line -->
+            <p class="mt-6 text-amber-200 text-sm">
+                Free consultation · No pressure · Response within 24 hours
+            </p>
+        </div>
+    </section>
+</Layout>
