@@ -1,0 +1,2 @@
+fatal: path 'src/pages/index.astro' exists, but not 'index.astro'
+hint: Did you mean 'HEAD:src/pages/index.astro' aka 'HEAD:./index.astro'?
